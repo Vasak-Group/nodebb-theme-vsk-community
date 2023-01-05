@@ -1,0 +1,43 @@
+{
+  "name": "nodebb-theme-vsk-community",
+  "version": "0.0.1",
+  "nbbpm": {
+    "compatibility": "^3.0.0"
+  },
+  "description": "Vsk Community theme for NodeBB",
+  "main": "library.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NodeBB/nodebb-theme-vsk-community"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "nodebb",
+    "theme",
+    "forum",
+    "bootstrap",
+    "responsive"
+  ],
+  "contributors": [
+    {
+      "name": "Joaquin Decima",
+      "email": "jdecima@vasak.net.ar",
+      "url": "https://github.com/JoaquinDecima"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NodeBB/nodebb-theme-vsk-community/issues"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^4.5.14",
+    "@fontsource/poppins": "^4.5.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-nodebb": "^0.2.0",
+    "eslint-plugin-import": "^2.24.2"
+  }
+}

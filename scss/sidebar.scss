@@ -1,0 +1,125 @@
+.skin-noskin {
+	// only using colors when there is no bootswatch skin applied
+	.sidebar, .bottombar {
+		color: $secondary !important;
+		background-color: $light !important;
+	}
+	.bottombar {
+		.dropdown-menu {
+			color: $secondary !important;
+			background-color: $light !important;
+		}
+	}
+}
+
+.sidebar {
+	$hover-color: mix($light, $dark, 90);
+
+	&.open {
+		min-width: 200px;
+		max-width: 200px;
+		width: 200px;
+
+		.sidebar-toggle {
+			.fa-angles-right { display: none; }
+			.fa-angles-left { display: inline-block; }
+		}
+		.visible-open { display: initial; }
+		.visible-closed { display: none; }
+		hr.visible-open { display: block; }
+		.truncate-open {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+	.visible-open {	display: none; }
+	.visible-closed {display: initial; }
+
+	.truncate-open {
+		overflow: initial;
+		text-overflow: initial;
+		white-space: initial;
+	}
+
+	.nav-link {
+		padding: 0;
+		&.active {
+			background-color: $hover-color;
+		}
+	}
+	#user_dropdown .avatar {
+		margin: 2px 0; // fixes the avatar so its height is same as the icons on right sidebar
+	}
+
+	.nav-btn {
+		padding: ($spacer * 0.25) ($spacer * 0.5);
+		border-radius: $border-radius-sm;
+		cursor: pointer;
+		&:hover {
+			background-color: $hover-color;
+		}
+	}
+
+	.sidebar-toggle {
+		justify-content: start;
+		.fa-angles-right { display: inline-block; }
+		.fa-angles-left { display: none; }
+	}
+
+	.search-dropdown {
+		width: 300px;
+	}
+
+	.chats-dropdown, .notifications-dropdown, .drafts-dropdown {
+		min-width: 300px;
+		ul {
+			max-height: 400px;
+			overflow-y: auto;
+		}
+	}
+
+	.badge {
+		font-size: 9px;
+		line-height: 12px;
+		&.visible-open {
+			font-size:12px;
+			line-height: 16px;
+		}
+	}
+
+	[data-widget-area="sidebar-footer"] {
+		font-size: $font-size-base * 0.75;
+	}
+}
+
+.bottombar {
+	z-index: $zindex-dropdown;
+	.nav-text {
+		font-size: 1rem;
+		color: $body-color;
+	}
+	.nav-btn {
+		padding: ($spacer * 0.5);
+		border-radius: $border-radius-sm;
+	}
+	.usermenu, .chats, .notifications, .drafts, .search, .logged-out-menu {
+		.visible-open { display: none; }
+	}
+	.badge {
+		font-size: 9px;
+		line-height: 12px;
+	}
+	.search.bottom-sheet .dropdown-menu {
+		max-height: 100%;
+	}
+}
+
+.sidebar-left {
+	border-right: 1px solid $border-color;
+	left: 0px;
+}
+.sidebar-right {
+	border-left: 1px solid $border-color;
+	right: 0px;
+}

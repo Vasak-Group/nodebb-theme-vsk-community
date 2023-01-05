@@ -1,0 +1,23 @@
+{
+	"id": "nodebb-theme-vsk-community",
+	"hooks": [
+		{ "hook": "static:app.load", "method": "init" },
+		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
+		{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" },
+		{ "hook": "filter:config.get", "method": "getThemeConfig" },
+		{ "hook": "filter:topic.build", "method": "addUserToTopic" },
+		{ "hook": "filter:middleware.renderHeader", "method": "filterMiddlewareRenderHeader" },
+		{ "hook": "filter:middleware.render", "method": "removeFinalBreadcrumb" }
+	],
+	"scripts": [
+		"public/vsk-community.js"
+	],
+	"modules": {
+		"../admin/plugins/vsk-community.js": "public/admin.js"
+	},
+	"staticDirs": {
+		"inter": "node_modules/@fontsource/inter/files",
+		"poppins": "node_modules/@fontsource/poppins/files"
+	},
+	"languages": "languages"
+}

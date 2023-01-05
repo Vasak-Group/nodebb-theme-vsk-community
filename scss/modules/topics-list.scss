@@ -1,0 +1,10 @@
+[component="category/topic"] {
+	&.selected {
+		[component="topic/select"] {
+			color: $success!important;
+		}
+	}
+	.lastpost .post-content {
+		p { margin-bottom: 0; }
+	}
+}

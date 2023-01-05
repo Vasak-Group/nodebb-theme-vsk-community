@@ -1,0 +1,61 @@
+[component="topic/navigator"] {
+	max-height: calc(200px + (2rem * 4));
+	user-select: none;
+
+	.track {
+		width: 2px;
+		background-color: mix($dark, $light, 10%);
+
+		.handle {
+			cursor: grab;
+			transition: $transition-base;
+
+			&:active {
+				transition: none;
+				cursor: grabbing;
+			}
+
+			.meta {
+				display: none;
+				top: -8px;
+				left: calc($spacer + 8px);
+				font-size: 13px;
+			}
+		}
+
+		.knob {
+			width: 16px;
+			height: 16px;
+			background-color: $link-color;
+			margin-left: 1px;
+		}
+
+		.unread {
+			width: 2px;
+			height: 0; // initial
+			bottom: 0;
+			background: $primary;
+			transition: $transition-base;
+
+			.meta {
+				display: none;
+				left: calc($spacer + 8px);
+				font-size: 13px;
+			}
+		}
+	}
+}
+
+.sidebar.open {
+	[component="topic/navigator"] {
+		align-self: flex-start;
+	}
+
+	[component="topic/navigator"].d-sm-flex.mt-auto + .mt-auto {
+		margin-top: 0 !important;
+	}
+
+	.handle .meta, .unread .meta {
+		display: block;
+	}
+}
