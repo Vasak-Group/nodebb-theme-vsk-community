@@ -8,7 +8,7 @@
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NodeBB/nodebb-theme-vsk-community"
+    "url": "https://github.com/Vasak-Group/nodebb-theme-vsk-community"
   },
   "scripts": {
     "lint": "eslint ."
@@ -29,7 +29,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NodeBB/nodebb-theme-vsk-community/issues"
+    "url": "https://github.com/Vasak-Group/nodebb-theme-vsk-community/issues"
   },
   "dependencies": {
     "@fontsource/inter": "^4.5.14",
