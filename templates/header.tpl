@@ -45,7 +45,7 @@
     </div>
 
     <section id="topbar" class="d-flex align-items-center">
-        <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="container-fluid d-flex justify-content-center justify-content-md-between">
             <div class="contact-info d-flex align-items-center">
                 <em class="fa fa-envelope d-flex align-items-center"><a href="mailto:info@vasak.net.ar">info@vasak.net.ar</a></em>
             </div>
@@ -58,7 +58,7 @@
     </section>
 
     <header id="header" class="d-flex align-items-center">
-        <div class="container d-flex align-items-center justify-content-between">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
             <!-- IMPORT partials/logo.tpl -->
             
             <nav id="navbar" class="navbar ms-auto me-auto">
