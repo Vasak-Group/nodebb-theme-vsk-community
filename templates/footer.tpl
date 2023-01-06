@@ -6,12 +6,11 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-4 col-md-6 footer-contact">
-                                <h3 class="v-font"><span>Vasak</span> group</h3>
-                                <p> GBA Sur (Quilmes - Berazategui) <br />
-                                    Buenos Aires<br />
-                                    Argentina <br /><br />
-                                    <strong>Telefono:</strong> +54 9 11 2388-2753<br />
-                                    <strong>Email:</strong> info@vasak.net.ar<br>
+                                <h3 class="v-font"><span>Vasak</span> Community</h3>
+                                <p>
+                                    Vasak Community es la comunidad de todos los usuarios y miembros de Vasak (Cada uno
+                                    de sus proyectos) Donde buscamos unirnos para mejorar en conjunto y tener un espacio
+                                    de dispersión.
                                 </p>
                             </div>
                             <div class="col-lg-4 col-md-6 footer-links text-center">
@@ -55,9 +54,12 @@
                     </div>
                 </div>
                 <div class="container py-4">
-                    <div class="copyright"> © <span class="v-font">Vasak
-                            group</span>. Todos los dertechos reservados. </div>
-                    <div class="credits"><span class="v-font">Vasak</span></div>
+                    <div class="copyright">
+                        © <span class="v-font">Vasak group</span>. Todos los dertechos reservados.
+                    </div>
+                    <div class="credits">
+                        <span class="v-font">Vasak</span>
+                    </div>
                 </div>
             </footer>
 
