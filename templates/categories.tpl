@@ -1,32 +1,29 @@
-<!-- IMPORT partials/breadcrumbs.tpl -->
 <div data-widget-area="header">
-	{{{ each widgets.header }}}
+	{{{each widgets.header}}}
 	{{widgets.header.html}}
-	{{{ end }}}
+	{{{end}}}
 </div>
-<div class="row">
+<div class="row categories" itemscope itemtype="http://www.schema.org/ItemList">
 	<div class="{{{ if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
 		{{{ if pagination.pages.length }}}
 		<div><!-- IMPORT partials/category-selector.tpl --></div>
 		{{{ end }}}
-		<ul class="categories list-unstyled" itemscope itemtype="http://www.schema.org/ItemList">
-			<hr class="text-muted opacity-25"/>
-			{{{ each categories }}}
-			<!-- IMPORT partials/categories/item.tpl -->
-			<hr class="text-muted opacity-25"/>
-			{{{ end }}}
-		</ul>
-
+		<div class="row {{{ if !config.disableMasonry }}}masonry{{{ end }}}">
+			<!-- BEGIN categories -->
+			<!-- IMPORT partials/category_child.tpl -->
+			<!-- END categories -->
+		</div>
 		<!-- IMPORT partials/paginator.tpl -->
 	</div>
+
 	<div data-widget-area="sidebar" class="col-lg-3 col-sm-12 {{{ if !widgets.sidebar.length }}}hidden{{{ end }}}">
-		{{{ each widgets.sidebar }}}
+		{{{each widgets.sidebar}}}
 		{{widgets.sidebar.html}}
-		{{{ end }}}
+		{{{end}}}
 	</div>
 </div>
 <div data-widget-area="footer">
-	{{{ each widgets.footer }}}
+	{{{each widgets.footer}}}
 	{{widgets.footer.html}}
-	{{{ end }}}
+	{{{end}}}
 </div>

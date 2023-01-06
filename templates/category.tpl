@@ -1,43 +1,52 @@
-<!-- IMPORT partials/breadcrumbs.tpl -->
-
-<div class="d-flex flex-column gap-2">
-	<div class="d-flex gap-2 align-items-center mb-3">
-		{buildCategoryIcon(@value, "40px", "rounded-1 flex-shrink-0")}
-		<h2 class="fs-2 fw-semibold mb-0">{./name}</h2>
-	</div>
-	<div class="d-flex flex-wrap gap-2">
-		<span class="badge stats">
-			<span title="{totalTopicCount}" class="human-readable-number fw-bold">{totalTopicCount}</span>
-			<span class="text-lowercase fw-normal">[[global:topics]]</span>
-		</span>
-		<span class="badge stats">
-			<span title="{totalPostCount}" class="human-readable-number fw-bold">{totalPostCount}</span>
-			<span class="text-lowercase fw-normal">[[global:posts]]</span>
-		</span>
-	</div>
-</div>
-
-{{{ if widgets.header.length }}}
 <div data-widget-area="header">
-	{{{ each widgets.header }}}
+	{{{each widgets.header}}}
 	{{widgets.header.html}}
-	{{{ end }}}
+	{{{end}}}
 </div>
-{{{ end }}}
+<div class="category row">
+	<div class="{{{ if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
 
-<div class="row mt-3">
-	<div class="category d-flex flex-column {{{if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
-		<!-- IMPORT partials/category/subcategory.tpl -->
+		<!-- IMPORT partials/breadcrumbs.tpl -->
 
-		<!-- IMPORT partials/topic-list-bar.tpl -->
+		<div class="subcategories mb-2">
+			{{{ if hasMoreSubCategories }}}
+			<div class="mb-2"><!-- IMPORT partials/category-selector.tpl --></div>
+			{{{ end }}}
+			<div class="row" component="category/subcategory/container">
+				{{{each children}}}
+				<!-- IMPORT partials/category_child.tpl -->
+				{{{end}}}
+			</div>
+			{{{ if hasMoreSubCategories}}}
+			<button class="btn btn-outline-secondary" component="category/load-more-subcategories">[[category:x-more-categories, {subCategoriesLeft}]]</button>
+			{{{ end }}}
+		</div>
+
+		<div class="topic-list-header sticky-top btn-toolbar justify-content-between py-2 mb-2 flex-nowrap">
+			<div class="d-flex gap-1 align-items-stretch">
+				{{{ if privileges.topics:create }}}
+				<a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary text-nowrap" data-ajaxify="false" role="button">[[category:new_topic_button]]</a>
+				{{{ else }}}
+					{{{ if !loggedIn }}}
+					<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
+					{{{ end }}}
+				{{{ end }}}
+
+				<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="d-inline-block">
+					<div class="alert alert-warning h-100 m-0 px-2 py-1 d-flex align-items-center hide" id="new-topics-alert"></div>
+				</a>
+			</div>
+			<div class="d-flex gap-1 align-items-stretch">
+				<!-- IMPORT partials/category/watch.tpl -->
+				<!-- IMPORT partials/category/sort.tpl -->
+				<!-- IMPORT partials/category/tools.tpl -->
+			</div>
+		</div>
 
 		{{{ if !topics.length }}}
-		{{{ if privileges.topics:create }}}
-		<hr class="visible-xs" />
 		<div class="alert alert-warning" id="category-no-topics">
 			[[category:no_topics]]
 		</div>
-		{{{ end }}}
 		{{{ end }}}
 
 		<!-- IMPORT partials/topics_list.tpl -->
@@ -46,20 +55,24 @@
 		<!-- IMPORT partials/paginator.tpl -->
 		{{{ end }}}
 	</div>
-	<div data-widget-area="sidebar" class="col-lg-3 col-sm-12 {{{ if !widgets.sidebar.length }}}hidden{{{ end }}}">
-		{{{ each widgets.sidebar }}}
+
+	{{{ if topics.length }}}
+	<div data-widget-area="sidebar" class="col-md-3 col-12 category-sidebar {{{ if !widgets.sidebar.length }}}hidden{{{ end }}}">
+		{{{each widgets.sidebar}}}
 		{{widgets.sidebar.html}}
-		{{{ end }}}
+		{{{end}}}
 	</div>
+	{{{ end }}}
 </div>
+
 <div data-widget-area="footer">
 	{{{each widgets.footer}}}
 	{{widgets.footer.html}}
 	{{{end}}}
 </div>
 
-<!-- IF !config.usePagination -->
+{{{ if !config.usePagination }}}
 <noscript>
 	<!-- IMPORT partials/paginator.tpl -->
 </noscript>
-<!-- ENDIF !config.usePagination -->
+{{{ end }}}

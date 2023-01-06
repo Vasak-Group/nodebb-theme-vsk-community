@@ -1,43 +1,32 @@
 {
   "name": "nodebb-theme-vsk-community",
-  "version": "0.0.2",
-  "nbbpm": {
-    "compatibility": "^3.0.0"
-  },
+  "version": "0.0.4",
   "description": "NodeBB Theme for Vasak Community.",
-  "main": "library.js",
+  "main": "theme.less",
   "repository": {
     "type": "git",
     "url": "https://github.com/Vasak-Group/nodebb-theme-vsk-community"
   },
-  "scripts": {
-    "lint": "eslint ."
-  },
   "keywords": [
     "nodebb",
+    "vsk-community",
     "theme",
-    "forum",
-    "bootstrap",
-    "responsive"
+    "themes"
   ],
-  "contributors": [
-    {
-      "name": "Joaquin Decima",
-      "email": "jdecima@vasak.net.ar",
-      "url": "https://github.com/JoaquinDecima"
-    }
-  ],
-  "license": "MIT",
+  "dependencies": {
+    "imagesloaded": "5.0.0",
+    "masonry-layout": "4.2.2",
+    "pulling": "^2.0.1"
+  },
+  "author": {
+    "name": "Joaquin (Pato) Decima",
+    "email": "jdecima@vasak.net.ar"
+  },
+  "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/Vasak-Group/nodebb-theme-vsk-community/issues"
   },
-  "dependencies": {
-    "@fontsource/inter": "^4.5.14",
-    "@fontsource/poppins": "^4.5.10"
-  },
-  "devDependencies": {
-    "eslint": "^8.31.0",
-    "eslint-config-nodebb": "^0.2.1",
-    "eslint-plugin-import": "^2.26.0"
+  "nbbpm": {
+    "compatibility": "^2.0.0"
   }
 }

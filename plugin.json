@@ -1,23 +1,20 @@
 {
 	"id": "nodebb-theme-vsk-community",
+	"library": "./lib/theme.js",
 	"hooks": [
-		{ "hook": "static:app.load", "method": "init" },
-		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
 		{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" },
-		{ "hook": "filter:config.get", "method": "getThemeConfig" },
-		{ "hook": "filter:topic.build", "method": "addUserToTopic" },
-		{ "hook": "filter:middleware.renderHeader", "method": "filterMiddlewareRenderHeader" },
-		{ "hook": "filter:middleware.render", "method": "removeFinalBreadcrumb" }
+		{ "hook": "static:app.load", "method": "init" },
+		{ "hook": "static:app.preload", "method": "preinit" },
+		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
+		{ "hook": "filter:config.get", "method": "getConfig" },
+		{ "hook": "filter:topic.build", "method": "filterTopicBuild" }
 	],
 	"scripts": [
-		"public/vsk-community.js"
+		"static/lib/vsk-community.js"
 	],
 	"modules": {
-		"../admin/plugins/vsk-community.js": "public/admin.js"
-	},
-	"staticDirs": {
-		"inter": "node_modules/@fontsource/inter/files",
-		"poppins": "node_modules/@fontsource/poppins/files"
-	},
-	"languages": "languages"
+		"../admin/plugins/vsk-community.js": "static/lib/admin.js",
+		"persona/taskbar.js": "../nodebb-theme-persona/public/modules/taskbar.js",
+		"persona/mobile-menu.js": "../nodebb-theme-persona/public/modules/mobile-menu.js"
+	}
 }
