@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-vsk-community",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "NodeBB Theme for Vasak Community.",
   "main": "theme.less",
   "repository": {
@@ -13,16 +13,36 @@
     "theme",
     "themes"
   ],
-  "dependencies": {
-    "imagesloaded": "5.0.0",
-    "masonry-layout": "4.2.2",
-    "pulling": "^2.0.1"
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged",
+      "commit-msg": "npx commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "author": {
     "name": "Joaquin (Pato) Decima",
     "email": "jdecima@vasak.net.ar"
   },
-  "license": "BSD-2-Clause",
+  "dependencies": {
+    "bent": "^7.3.12"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-angular": "11.0.0",
+    "eslint": "8.x",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-config-nodebb": "0.1.1",
+    "eslint-plugin-import": "2.x",
+    "husky": "5.0.9",
+    "lint-staged": "10.5.4"
+  },
   "bugs": {
     "url": "https://github.com/Vasak-Group/nodebb-theme-vsk-community/issues"
   },

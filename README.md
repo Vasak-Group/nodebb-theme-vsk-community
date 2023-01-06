@@ -1,28 +1,45 @@
-Vsk Community Theme for NodeBB
-=========================
+# Quickstart Theme for NodeBB
 
-A simple theme for NodeBB. Check out the theming guide that accompanies this work at http://burnaftercompiling.com/nodebb/nodebb-hands-on-theming-guide-part-1/
+This repository contains all of the preparatory work for a theme based off of the [Persona theme](https://github.com/NodeBB/nodebb-theme-persona). If you'd like to base your theme off another supported theme instead, switch to the appropriate branch:
 
+* [Lavender](https://github.com/NodeBB/nodebb-theme-lavender)
+* [Vanilla](https://github.com/NodeBB/nodebb-theme-vanilla)
+* [Material](https://github.com/pichalite/nodebb-theme-material)
 
-## Screenshots
+Fork it to create your own theme based off of it!
 
-**Home View**
+### Some things to change
 
-[![Home View](http://i.imgur.com/fllGSje.png)](http://i.imgur.com/fllGSje.png)
+* You should rename this theme from `quickstart` to something else. Change all instances of that word in the following files:
+    * `package.json`
+    * `plugin.json`
+    * `theme.json`
 
-**Category View**
+### When you're done...
 
-[![Category View](http://i.imgur.com/qhX84In.png)](http://i.imgur.com/qhX84In.png)
+Be sure to add some other metadata to the `package.json`, like this:
 
-**Topic View**
+``` json
+"author": {
+    "name": "Your Name",
+    "email": "Your Email",
+    "url": "Your website"
+},
+"repository": {
+    "type": "git",
+    "url": "https://github.com/{your-username}/{your-repository}"
+},
+"bugs": {
+    "url": "https://github.com/{your-username}/{your-repository}/issues"
+}
+```
 
-[![Topic View](http://i.imgur.com/W7cRtzQ.png)](http://i.imgur.com/W7cRtzQ.png)
+Also, add a screenshot! Take a picture of your theme, and save it as "screenshot.png" in the root of your theme folder, then add this to `theme.json`:
 
-## Installation
+``` json
+"screenshot": "screenshot.png"
+```
 
-    npm install nodebb-theme-vsk-community
+### Credits
 
-
-## Credits
-
-variables.less modified from "White Plum" by [divshot](https://github.com/divshot/)
+Material theme by [pichalite](https://github.com/pichalite).

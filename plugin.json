@@ -1,20 +1,18 @@
 {
-	"id": "nodebb-theme-vsk-community",
+	"id": "nodebb-theme-quickstart",
 	"library": "./lib/theme.js",
 	"hooks": [
-		{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" },
-		{ "hook": "static:app.load", "method": "init" },
-		{ "hook": "static:app.preload", "method": "preinit" },
-		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
-		{ "hook": "filter:config.get", "method": "getConfig" },
-		{ "hook": "filter:topic.build", "method": "filterTopicBuild" }
+		{
+			"hook": "filter:widgets.getAreas", "method": "defineWidgetAreas"
+		}
 	],
 	"scripts": [
-		"static/lib/vsk-community.js"
+		"public/client.js",
+		"../nodebb-theme-persona/public/persona.js",
+		"../nodebb-theme-persona/public/modules/autohidingnavbar.js",
+		"../nodebb-theme-persona/public/modules/quickreply.js"
 	],
 	"modules": {
-		"../admin/plugins/vsk-community.js": "static/lib/admin.js",
-		"persona/taskbar.js": "../nodebb-theme-persona/public/modules/taskbar.js",
-		"persona/mobile-menu.js": "../nodebb-theme-persona/public/modules/mobile-menu.js"
+		"pulling.js": "node_modules/pulling/build/pulling-drawer.js"
 	}
 }
