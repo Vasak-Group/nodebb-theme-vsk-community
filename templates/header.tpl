@@ -54,15 +54,15 @@
             
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a href="/#hero" class="router-link-active router-link-exact-active nav-link">Inicio</a></li>
-                    <li><a href="/#about" class="router-link-active router-link-exact-active nav-link">Sobre Nosotros</a></li>
-                    <li><a href="/#services" class="router-link-active router-link-exact-active nav-link">Servicios</a></li>
-                    <li><a href="/#portfolio" class="router-link-active router-link-exact-active nav-link">Portfolio</a></li>
-                    <li><a href="/#team" class="router-link-active router-link-exact-active nav-link">Equipo</a></li>
-                    <li><a href="/#contact" class="router-link-active router-link-exact-active nav-link">Contacto</a></li>
+                   <!-- IMPORT partials/base-menu.tpl -->
                 </ul>
                 <em class="fa fa-list mobile-nav-toggle"></em>
             </nav>
+            <div class="navbar ms-auto">
+                <ul>
+                   <!-- IMPORT partials/user-menu.tpl -->
+                </ul>
+            </div>
         </div>
     </header>
 
