@@ -1,10 +1,10 @@
 {
   "name": "nodebb-theme-vsk-community",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "nbbpm": {
     "compatibility": "^3.0.0"
   },
-  "description": "Vsk Community theme for NodeBB",
+  "description": "NodeBB Theme for Vasak Community.",
   "main": "library.js",
   "repository": {
     "type": "git",
