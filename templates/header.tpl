@@ -52,7 +52,7 @@
         <div class="container d-flex align-items-center justify-content-between">
             <!-- IMPORT partials/logo.tpl -->
             
-            <nav id="navbar" class="navbar">
+            <nav id="navbar" class="navbar ms-auto me-auto">
                 <ul>
                    <!-- IMPORT partials/base-menu.tpl -->
                 </ul>
