@@ -63,6 +63,10 @@
                 </div>
             </footer>
 
+            <a href="#" class="scroll-top btn-hover" style="display: block;">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+
             {{{ if !isSpider }}}
             <div component="toaster/tray" class="alert-window">
                 <div id="reconnect-alert" class="alert alert-dismissible alert-warning clearfix hide"
