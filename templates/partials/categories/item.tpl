@@ -43,13 +43,13 @@
             <div class="col-md-8 op-7">
                 <div class="row text-center op-7">
                     <div class="col px-1">
-                        <i class="ion-connection-bars icon-1x"></i>
+                        <i class="fa fa-newspaper fa-2x"></i>
                         <span class="{../unread-class} d-block text-sm" title="{../totalTopicCount}">
                             [[global:topics]] {../totalTopicCount}
                         </span>
                     </div>
                     <div class="col px-1">
-                        <i class="ion-ios-chatboxes-outline icon-1x"></i>
+                        <i class="fa fa-messages fa-2x"></i>
                         <span class="{../unread-class} d-block text-sm" title="{../totalPostCount}">
                             [[global:posts]] {../totalPostCount}
                         </span>
