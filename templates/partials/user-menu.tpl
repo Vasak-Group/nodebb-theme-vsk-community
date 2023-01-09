@@ -1,45 +1,76 @@
-{{{ if config.loggedIn }}}
-    <li><button type="button" class="navbar-toggler border-0" id="mobile-chats">
-        <span component="notifications/icon" class="notification-icon fa fa-fw fa-bell-o unread-count"
-            data-content="{unreadCount.notification}"></span>
-        <span component="chat/icon" class="notification-icon fa fa-fw fa-comments unread-count"
-            data-content="{unreadCount.chat}"></span>
-        {buildAvatar(user, "32px", true)}
-    </button></li>
-{{{ end }}}
-
-{{{each navigation}}}
-    <!-- IF function.displayMenuItem, @index -->
-    <li class="nav-item {navigation.class}{{{ if navigation.dropdown }}} dropdown{{{ end }}}" title="{navigation.title}">
-        <a class="nav-link navigation-link {{{ if navigation.dropdown }}}dropdown-toggle{{{ end }}}"
-            {{{ if navigation.dropdown }}} href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false" {{{ else }}} href="{navigation.route}" {{{ end }}}
-            {{{ if navigation.id }}}id="{navigation.id}" {{{ end }}}
-            {{{ if navigation.targetBlank }}} target="_blank"{{{ end }}}>
-
-            {{{ if navigation.iconClass }}}
-                <i class="fa fa-fw {navigation.iconClass}" data-content="{navigation.content}"></i>
-            {{{ end }}}
-
-            {{{ if navigation.text }}}
-                <span class="{navigation.textClass}">{navigation.text}</span>
-            {{{ end }}}
-
-            {{{ if navigation.dropdown}}}
-                <i class="fa fa-caret-down"></i>
-            {{{ end }}}
-        </a>
-        {{{ if navigation.dropdown }}}
-            <ul class="dropdown-menu">
-                {navigation.dropdownContent}
+{{{ if !maintenanceHeader }}}
+    {{{ if config.loggedIn }}}
+        <li class="nav-item notifications dropdown d-none d-sm-block" component="notifications"
+            title="[[global:header.notifications]]">
+            <a href="{relative_path}/notifications" class="nav-link" data-bs-toggle="dropdown" id="notif_dropdown"
+                data-ajaxify="false" role="button">
+                <i component="notifications/icon"
+                    class="fa fa-fw {{{ if unreadCount.notification}}}fa-bell{{{ else }}}fa-bell-o{{{ end }}} unread-count"
+                    data-content="{unreadCount.notification}"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notif_dropdown">
+                <li>
+                    <ul component="notifications/list" class="notification-list">
+                        <li class="loading-text">
+                            <a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:notifications.loading]]</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="notif-dropdown-link">
+                    <div class="btn-group d-flex justify-content-center">
+                        <a role="button" href="#" class="btn btn-light mark-all-read"><i class="fa fa-check-double"></i>
+                            [[notifications:mark_all_read]]</a>
+                        <a class="btn btn-light" href="{relative_path}/notifications"><i class="fa fa-list"></i>
+                            [[notifications:see_all]]</a>
+                    </div>
+                </li>
             </ul>
-        {{{ end }}}
-    </li>
-    <!-- ENDIF function.displayMenuItem -->
-{{{end}}}
+        </li>
 
-<li>
-    <a href="#" id="reconnect" class="nav-link hide" title="[[global:reconnecting-message, {config.siteTitle}]]">
-        <i class="fa fa-check"></i>
-    </a>
-</li>
+        <!-- IF canChat -->
+        <li class="nav-item chats dropdown" title="[[global:header.chats]]">
+            <a class="nav-link" data-bs-toggle="dropdown" href="{relative_path}/user/{user.userslug}/chats"
+                id="chat_dropdown" component="chat/dropdown" data-ajaxify="false" role="button">
+                <i component="chat/icon"
+                    class="fa {{{ if unreadCount.chat}}}fa-comment{{{ else }}}fa-comment-o{{{ end }}} fa-fw unread-count"
+                    data-content="{unreadCount.chat}"></i> <span class="d-inline d-sm-none">[[global:header.chats]]</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="chat_dropdown">
+                <li>
+                    <ul component="chat/list" class="chat-list chats-list">
+                        <li class="loading-text">
+                            <a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:chats.loading]]</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="notif-dropdown-link">
+                    <div class="btn-group d-flex justify-content-center">
+                        <a class="btn btn-light mark-all-read" href="#" component="chats/mark-all-read"><i
+                                class="fa fa-check-double"></i> [[modules:chat.mark_all_read]]</a>
+                        <a class="btn btn-light" href="{relative_path}/user/{user.userslug}/chats"><i
+                                class="fa fa-comments"></i> [[modules:chat.see_all]]</a>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <!-- ENDIF canChat -->
+
+        <!-- IMPORT partials/header/user-menu.tpl -->
+    {{{ else }}}
+        {{{ if allowRegistration }}}
+            <li><a class="nav-link" href="{relative_path}/register">
+                    <i class="fa fa-pencil fa-fw d-inline-block d-sm-none"></i>
+                    <span>[[global:register]]</span>
+            </a></li>
+        {{{ end }}}
+        <li><a class="nav-link" href="{relative_path}/login">
+                <i class="fa fa-sign-in fa-fw d-inline-block d-sm-none"></i>
+                <span>[[global:login]]</span>
+        </a></li>
+    {{{ end }}}
+{{{ else }}}
+    <li><a href="{relative_path}/login">
+            <i class="fa fa-sign-in fa-fw d-block d-sm-none"></i>
+            <span>[[global:login]]</span>
+    </a></li>
+{{{ end }}}
