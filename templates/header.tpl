@@ -57,7 +57,7 @@
         </div>
     </section>
 
-    <header id="header" class="d-flex align-items-center">
+    <header id="header" class="navbar navbar-expand-lg d-flex align-items-center">
         <div class="container-fluid d-flex align-items-center justify-content-between">
             <!-- IMPORT partials/logo.tpl -->
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#vskNavBar"
@@ -65,12 +65,12 @@
 				<em class="fa fa-list mobile-nav-toggle"></em>
 			</button>
             <div class="collapse navbar-collapse" id="vskNavBar">
-				<nav id="navbar" class="navbar ms-auto me-auto">
+				<nav id="navbar" class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
 					<ul>
 					<!-- IMPORT partials/base-menu.tpl -->
 					</ul>
 				</nav>
-				<div class="navbar ms-auto">
+				<div class="navbar-nav ms-auto mb-2 mb-lg-0">
 					<ul>
 					<!-- IMPORT partials/user-menu.tpl -->
 					</ul>
