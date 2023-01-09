@@ -79,6 +79,96 @@
             {{{ end }}}
 
             <!-- IMPORT partials/footer/js.tpl -->
+
+            <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+            <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+            <script src="/js/noframework.waypoints.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+            <script>
+                (function() {
+                    /**
+                     * Header fixed top on scroll
+                     */
+                    let selectHeader = select('#header');
+                    if (selectHeader) {
+                        let headerOffset = selectHeader.offsetTop;
+                        let nextElement = selectHeader.nextElementSibling;
+                        const headerFixed = () => {
+                            if ((headerOffset - window.scrollY) <= 0) {
+                                selectHeader.classList.add('fixed-top');
+                                nextElement.classList.add('scrolled-offset');
+                            } else {
+                                selectHeader.classList.remove('fixed-top');
+                                nextElement.classList.remove('scrolled-offset');
+                            }
+                        };
+                        window.addEventListener('load', headerFixed);
+                        onscroll(document, headerFixed);
+                    }
+
+                    /**
+                     * Back to top button
+                     */
+                    let backtotop = select('.back-to-top');
+                    if (backtotop) {
+                        const toggleBacktotop = () => {
+                            if (window.scrollY > 100) {
+                                backtotop.classList.add('active');
+                            } else {
+                                backtotop.classList.remove('active');
+                            }
+                        };
+                        window.addEventListener('load', toggleBacktotop);
+                        onscroll(document, toggleBacktotop);
+                    }
+
+                    /**
+                     * Mobile nav toggle
+                     */
+                    on('click', '.mobile-nav-toggle', function(e) {
+                        select('#navbar').classList.toggle('navbar-mobile');
+                        this.classList.toggle('bi-list');
+                        this.classList.toggle('bi-x');
+                    });
+
+                    /**
+                     * Mobile nav dropdowns activate
+                     */
+                    on('click', '.navbar .dropdown > a', function(e) {
+                        if (select('#navbar').classList.contains('navbar-mobile')) {
+                            e.preventDefault();
+                            this.nextElementSibling.classList.toggle('dropdown-active');
+                        }
+                    }, true);
+
+                    /**
+                     * Scroll with ofset on page load with hash links in the url
+                     */
+                    window.addEventListener('load', () => {
+                        if (window.location.hash) {
+                            if (select(window.location.hash)) {
+                                scrollto(window.location.hash);
+                            }
+                        }
+                    });
+
+                    /**
+                     * Preloader
+                     */
+                    let preloader = select('#preloader');
+                    if (preloader) {
+                        window.addEventListener('load', () => {
+                            preloader.remove();
+                        });
+                    }
+                })()
+            </script>
             </body>
 
 </html>

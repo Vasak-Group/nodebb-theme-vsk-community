@@ -10,8 +10,7 @@
 		"public/client.js",
 		"../nodebb-theme-persona/public/persona.js",
 		"../nodebb-theme-persona/public/modules/autohidingnavbar.js",
-		"../nodebb-theme-persona/public/modules/quickreply.js",
-		"public/js/vsk-main.js"
+		"../nodebb-theme-persona/public/modules/quickreply.js"
 	],
 	"modules": {
 		"pulling.js": "node_modules/pulling/build/pulling-drawer.js"
