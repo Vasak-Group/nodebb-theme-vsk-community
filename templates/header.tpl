@@ -60,18 +60,22 @@
     <header id="header" class="d-flex align-items-center">
         <div class="container-fluid d-flex align-items-center justify-content-between">
             <!-- IMPORT partials/logo.tpl -->
-            
-            <nav id="navbar" class="navbar ms-auto me-auto">
-                <ul>
-                   <!-- IMPORT partials/base-menu.tpl -->
-                </ul>
-                <em class="fa fa-list mobile-nav-toggle"></em>
-            </nav>
-            <div class="navbar ms-auto">
-                <ul>
-                   <!-- IMPORT partials/user-menu.tpl -->
-                </ul>
-            </div>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#vskNavBar"
+				aria-controls="vskNavBar" aria-expanded="false" aria-label="Toggle navigation">
+				<em class="fa fa-list mobile-nav-toggle"></em>
+			</button>
+            <div class="collapse navbar-collapse" id="vskNavBar">
+				<nav id="navbar" class="navbar ms-auto me-auto">
+					<ul>
+					<!-- IMPORT partials/base-menu.tpl -->
+					</ul>
+				</nav>
+				<div class="navbar ms-auto">
+					<ul>
+					<!-- IMPORT partials/user-menu.tpl -->
+					</ul>
+				</div>
+			</div>
         </div>
     </header>
 
