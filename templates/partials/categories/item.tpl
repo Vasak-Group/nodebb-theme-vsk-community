@@ -49,7 +49,7 @@
                         </span>
                     </div>
                     <div class="col px-1">
-                        <i class="fa-solid fa-comments fa-2x"></i>
+                        <i class="fa fa-comments fa-2x"></i>
                         <span class="{../unread-class} d-block text-sm" title="{../totalPostCount}">
                             [[global:posts]] {../totalPostCount}
                         </span>
