@@ -58,7 +58,7 @@
             </div>
 
             <div class="col-12">
-                <div class="col-8 px-1" component="topic/teaser">
+                <div class="col px-1" component="topic/teaser">
                     <!-- IMPORT partials/categories/lastpost.tpl -->
                 </div>
             </div>
