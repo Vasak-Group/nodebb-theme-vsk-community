@@ -4,7 +4,7 @@
 
     <div class="card row-hover pos-relative py-3 px-3 mb-3" style="background: {../bgColor}">
         <div class="row align-items-center">
-            <div class="col-md-4 mb-3 mb-sm-0">
+            <div class="col-md-6 mb-3 mb-sm-0">
                 <div class="float-start">
                     {buildCategoryIcon(@value, "48px")}
                 </div>
@@ -40,7 +40,7 @@
 
             </div>
             <!-- IF !../link -->
-            <div class="col-md-8 op-7">
+            <div class="col-md-6 op-7">
                 <div class="row text-center op-7">
                     <div class="col px-1">
                         <i class="fa fa-newspaper fa-2x"></i>
@@ -49,14 +49,17 @@
                         </span>
                     </div>
                     <div class="col px-1">
-                        <i class="fa fa-messages fa-2x"></i>
+                        <i class="fa-solid fa-comments fa-2x"></i>
                         <span class="{../unread-class} d-block text-sm" title="{../totalPostCount}">
                             [[global:posts]] {../totalPostCount}
                         </span>
                     </div>
-                    <div class="col-8 px-1" component="topic/teaser">
-                        <!-- IMPORT partials/categories/lastpost.tpl -->
-                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="col-8 px-1" component="topic/teaser">
+                    <!-- IMPORT partials/categories/lastpost.tpl -->
                 </div>
             </div>
             <!-- ENDIF !../link -->
