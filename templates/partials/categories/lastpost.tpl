@@ -10,7 +10,7 @@
 			</a>
 		</p>
 		<div class="post-content">
-			{../content}
+			<div class="scrolling">{../content}</div>
 		</div>
 	</div>
 	<!-- ENDIF @first -->

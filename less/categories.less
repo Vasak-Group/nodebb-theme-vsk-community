@@ -50,3 +50,23 @@
     border-radius: 0 10px 10px 0;
     border-left: 5px solid @accent-color;
 }
+
+@keyframes "marquee" {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+.post-content {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.scrolling {
+	animation: marquee 2s linear infinite;
+	display: inline-block;
+	padding-right: 10px;
+}
