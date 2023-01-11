@@ -10,7 +10,7 @@
 			</a>
 		</p>
 		<div class="post-content">
-			{../title}
+			{../content}
 		</div>
 	</div>
 	<!-- ENDIF @first -->
