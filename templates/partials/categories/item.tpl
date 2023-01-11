@@ -2,7 +2,7 @@
     class="row clearfix category-{../cid}">
     <meta itemprop="name" content="{../name}">
 
-    <div class="card row-hover pos-relative py-3 px-3 mb-3" style="border-color: {../bgColor}">
+    <div class="card row-hover pos-relative py-3 px-3 mb-3" style="background: {../bgColor}">
         <div class="row align-items-center">
             <div class="col-md-4 mb-3 mb-sm-0">
                 <div class="float-start">
@@ -27,12 +27,12 @@
                 {{{ if ../children.length }}}
                 <div class="text-sm op-5">
                     {{{ each ../children }}}
-                    {{{ if !../isSection }}}
-                    <a class="text-black mr-2" {{{ if ../link }}}href="{../link}"
-                        {{{ else }}}href="{config.relative_path}/category/{../slug}" {{{ end }}}>
-                        {buildCategoryIcon(@value, "18px", "rounded-circle")} {../name}
-                    </a>
-                    {{{ end }}}
+                        {{{ if !../isSection }}}
+                        <a class="text-black mr-2" {{{ if ../link }}}href="{../link}"
+                            {{{ else }}}href="{config.relative_path}/category/{../slug}" {{{ end }}}>
+                            {buildCategoryIcon(@value, "18px", "rounded-circle")} {../name}
+                        </a>
+                        {{{ end }}}
                     {{{ end }}}
                 </div>
                 {{{ end }}}
