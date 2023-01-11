@@ -43,13 +43,13 @@
             <div class="col-md-6 op-7">
                 <div class="row text-center op-7">
                     <div class="col px-1">
-                        <i class="fa fa-newspaper fa-2x"></i>
+                        <i class="fa fa-newspaper fa-2x p-3"></i>
                         <span class="{../unread-class} d-block text-sm" title="{../totalTopicCount}">
                             [[global:topics]] {../totalTopicCount}
                         </span>
                     </div>
                     <div class="col px-1">
-                        <i class="fa fa-comments fa-2x"></i>
+                        <i class="fa fa-comments fa-2x p-3"></i>
                         <span class="{../unread-class} d-block text-sm" title="{../totalPostCount}">
                             [[global:posts]] {../totalPostCount}
                         </span>
