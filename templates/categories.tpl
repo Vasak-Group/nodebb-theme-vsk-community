@@ -4,6 +4,7 @@
     {{widgets.header.html}}
     {{{ end }}}
 </div>
+
 <div class="row">
     <div class="main {{{ if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
         {{{ if pagination.pages.length }}}
@@ -26,6 +27,7 @@
         {{{ end }}}
     </div>
 </div>
+
 <div data-widget-area="footer">
     {{{ each widgets.footer }}}
     {{widgets.footer.html}}
