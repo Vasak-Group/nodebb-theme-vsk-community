@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-vsk-community",
-  "version": "0.0.10",
+  "version": "0.0.29",
   "description": "NodeBB Theme for Vasak Community.",
   "main": "theme.less",
   "repository": {
