@@ -15,7 +15,9 @@
     "vasak",
     "community",
     "foro",
-    "forum"
+    "forum",
+    "responsive",
+    "bootstrap"
   ],
   "license": "MIT",
   "husky": {
