@@ -1,6 +1,6 @@
 {
 	"id": "nodebb-theme-quickstart",
-	"library": "./lib/theme.js",
+	"library": "./lib/vsk-community.js",
 	"hooks": [
 		{
 			"hook": "filter:widgets.getAreas", "method": "defineWidgetAreas"
@@ -8,9 +8,7 @@
 	],
 	"scripts": [
 		"public/client.js",
-		"../nodebb-theme-persona/public/persona.js",
-		"../nodebb-theme-persona/public/modules/autohidingnavbar.js",
-		"../nodebb-theme-persona/public/modules/quickreply.js"
+		"../nodebb-theme-lavender/static/lib/lavender.js"
 	],
 	"modules": {
 		"pulling.js": "node_modules/pulling/build/pulling-drawer.js"
