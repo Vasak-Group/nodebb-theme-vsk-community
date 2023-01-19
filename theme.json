@@ -1,8 +1,0 @@
-{
-    "id": "nodebb-theme-vsk-community",
-    "name": "Vsk Community",
-    "description": "The Vasak Community Official Theme",
-    "url": "https://github.com/Vasak-Group/nodebb-theme-vsk-community",
-    "screenshot": "screenshot.png",
-    "baseTheme": "nodebb-theme-lavender"
-}
