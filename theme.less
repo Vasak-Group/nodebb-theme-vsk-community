@@ -5,6 +5,7 @@
 @import "less/sidebar.less";
 @import "less/widgets.less";
 @import "less/categories.less";
+@import "less/category.less";
 
 .recent-cards {
 	.recent-card-container {
@@ -182,43 +183,6 @@ body.lights-out {
 	li[component="post"] {
 		background-color: #36393e;
 	}
-	.btn-primary {
-		background-color: #1c74e9;
-		border-color: #1c74e9;
-		font-weight: 600;
-		&:active {
-			background-color: #0e79cf;
-			border-color: #0e79cf;
-			font-weight: 600;
-		}
-		&:focus {
-			background-color: #0e79cf;
-			border-color: #0e79cf;
-			font-weight: 600;
-		}
-		&:hover {
-			background-color: #0e79cf;
-			border-color: #0e79cf;
-			font-weight: 600;
-		}
-	}
-	.btn-primary.active {
-		background-color: #0e79cf;
-		border-color: #0e79cf;
-		font-weight: 600;
-	}
-	.btn-primary.focus {
-		background-color: #0e79cf;
-		border-color: #0e79cf;
-		font-weight: 600;
-	}
-	.open {
-		>.dropdown-toggle.btn-primary {
-			background-color: #0e79cf;
-			border-color: #0e79cf;
-			font-weight: 600;
-		}
-	}
 	.recent-cards {
 		.recent-card-container {
 			.recent-card {
@@ -244,12 +208,6 @@ body.lights-out {
 	.bg-info {
 		background-color: #36393e;
 	}
-	.alert-info {
-		background-color: #36393e;
-		border-color: #252a30;
-		color: #ddd;
-		border-radius: 4px;
-	}
 	.page-register-complete {
 		.tos {
 			background: #36393e;
@@ -270,12 +228,6 @@ body.lights-out {
 		.chat-list {
 			color: #ccc;
 		}
-	}
-	.alert-danger {
-		background-color: #36393e;
-		border-color: #252a30;
-		color: #999;
-		border-radius: 4px;
 	}
 	.form-control {
 		background-color: #36393e;
@@ -349,11 +301,6 @@ body.lights-out {
 		background-color: #3d4147;
 		border-top: 1px solid #252a30;
 		border-bottom: 1px solid #252a30;
-	}
-	.btn-default {
-		color: #d9d9d9;
-		background-color: #36393e;
-		border-color: #252a30;
 	}
 	.chat-modal {
 		.modal-header {
@@ -661,25 +608,6 @@ li[component="post"] {
 	margin-bottom: 20px;
 	padding-right: 30px;
 }
-.open {
-	>.dropdown-toggle.btn-primary {
-		background-color: #0e79cf;
-		border-color: #0e79cf;
-		font-weight: 600;
-		border-radius: 4px;
-	}
-	>.dropdown-toggle.btn-info {
-		border-radius: 4px;
-	}
-	>.dropdown-toggle.btn-default {
-		color: #fff;
-		background-color: #667c99;
-		border-color: #667c99;
-	}
-	>.dropdown-menu {
-		border-radius: 4px;
-	}
-}
 .selection-tooltip-container {
 	border: none;
 	background: none;
@@ -690,11 +618,6 @@ li[component="post"] {
 		padding: 3px 5px;
 		color: #667c99;
 		border-radius: 4px;
-		.btn-info {
-			&:hover {
-				border-radius: 4px;
-			}
-		}
 	}
 }
 .modal-content {
@@ -813,9 +736,6 @@ li.topic-owner-post {
 	}
 	border-radius: 4px;
 }
-.btn {
-	border-radius: 4px;
-}
 .group-label {
 	border-radius: 4px;
 }
@@ -829,26 +749,6 @@ code {
 	border-radius: 4px;
 	color: #333;
 	background-color: #e8ecf3;
-}
-.btn-info {
-	&:focus {
-		border-radius: 4px;
-	}
-	&:active {
-		border-radius: 4px;
-	}
-}
-.btn-info.focus {
-	border-radius: 4px;
-}
-.btn-info.active {
-	border-radius: 4px;
-}
-.alert-warning {
-	border-radius: 4px;
-	background-color: #d9534f;
-	color: #fff;
-	border-color: #d9534f;
 }
 .announcements-widget {
 	padding: 0;
@@ -916,16 +816,6 @@ code {
 	box-shadow: none;
 	border: 1px solid #e8ecf3;
 }
-.btn-default.active {
-	color: #fff;
-	background-color: #667c99;
-	border-color: #667c99;
-}
-.btn-default.focus {
-	color: #fff;
-	background-color: #667c99;
-	border-color: #667c99;
-}
 .panel-default {
 	border-radius: 4px;
 	border-color: #e8ecf3;
@@ -933,9 +823,6 @@ code {
 .dropdown-menu {
 	>li {
 		>form {
-			>.btn-link {
-				color: #f23d37;
-			}
 			>button {
 				color: #f23d37;
 			}
