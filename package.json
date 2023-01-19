@@ -3,6 +3,9 @@
   "version": "0.0.31",
   "description": "NodeBB Theme for Vasak Community. It is basically a CSS that allows you to extend the person Theme and maintain a new theme based on that standard.",
   "main": "theme.less",
+  "scripts": {
+    "build:less": "lessc theme.less build/theme.css"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Vasak-Group/nodebb-theme-vsk-community"
@@ -25,8 +28,7 @@
     "email": "jdecima@vasak.net.ar"
   },
   "dependencies": {
-  },
-  "devDependencies": {
+    "less": "^4.1.3"
   },
   "bugs": {
     "url": "https://github.com/Vasak-Group/nodebb-theme-vsk-community/issues"
