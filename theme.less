@@ -1,3 +1,6 @@
+@import "less/variables.less";
+@import "less/global.less";
+
 @keyframes "pulsate" {
 	0% {
 		opacity: 0;
@@ -851,93 +854,18 @@ blockquote {
 		margin-left: 0;
 	}
 }
-body {
-	background-color: #e8ecf3;
-}
+
 .topic-list-header {
 	background-color: #e8ecf3;
 	border-top: none;
 	border-bottom: none;
 }
-.btn-default {
-	color: #56646f;
-	background-color: #ffffff;
-	border-color: #e8ecf3;
-	font-weight: 600;
-	color: #56646f;
-	background-color: #fff;
-	border-color: #e8ecf3;
-	&:active {
-		color: #fff;
-		background-color: #667c99;
-		border-color: #667c99;
-	}
-	&:focus {
-		color: #fff;
-		background-color: #667c99;
-		border-color: #667c99;
-	}
-	&:hover {
-		color: #fff;
-		background-color: #667c99;
-		border-color: #667c99;
-	}
-}
+
 li[component="post"] {
 	background-color: #fff;
 	border-radius: 8px;
 	margin-bottom: 20px;
 	padding-right: 30px;
-}
-.btn-group {
-	>.btn {
-		&:not(:first-child) {
-			&:not(:last-child) {
-				&:not(.dropdown-toggle) {
-					border-radius: 0 4px 4px 0;
-				}
-			}
-		}
-	}
-}
-a {
-	color: #1c74e9;
-}
-.btn-primary {
-	background-color: #1c74e9;
-	border-color: #1c74e9;
-	font-weight: 600;
-	border-radius: 4px;
-	&:active {
-		background-color: #0e79cf;
-		border-color: #0e79cf;
-		font-weight: 600;
-		border-radius: 4px;
-	}
-	&:focus {
-		background-color: #0e79cf;
-		border-color: #0e79cf;
-		font-weight: 600;
-		border-radius: 4px;
-	}
-	&:hover {
-		background-color: #0e79cf;
-		border-color: #0e79cf;
-		font-weight: 600;
-		border-radius: 4px;
-	}
-}
-.btn-primary.active {
-	background-color: #0e79cf;
-	border-color: #0e79cf;
-	font-weight: 600;
-	border-radius: 4px;
-}
-.btn-primary.focus {
-	background-color: #0e79cf;
-	border-color: #0e79cf;
-	font-weight: 600;
-	border-radius: 4px;
 }
 .open {
 	>.dropdown-toggle.btn-primary {
@@ -1145,26 +1073,27 @@ code {
 	>.inline-block {
 		width: 100%;
 		margin-top: -8px;
-		&: first-child { margin-top: 0;
+		&:first-child { 
+			margin-top: 0;
+		}
+		.tag-item {
+			float: left;
+			width: 80%;
+			background-color: #4fc3f7;
+			color: white;
+			font-weight: 500;
+			padding-left: 10px;
+			position: relative;
+			padding: 5px 5px 4px 10px;
+		}
 	}
-	.tag-item {
-		float: left;
-		width: 80%;
-		background-color: #4fc3f7;
-		color: white;
-		font-weight: 500;
-		padding-left: 10px;
-		position: relative;
-		padding: 5px 5px 4px 10px;
+	& {
+		&:last-child {
+			margin-bottom: -5px;
+		}
 	}
-}
-& {
-	&:last-child {
-		margin-bottom: -5px;
-	}
-}
-} {
-	.popular-tags {
+} 
+.popular-tags {
 		.tag-topic-count {
 			float: left;
 			width: 20%;
@@ -1176,7 +1105,6 @@ code {
 			text-align: center;
 		}
 	}
-}
 .popular-tags-bar {
 	background-color: rgba(0,0,0,0.07);
 	width: 0px;
