@@ -1,66 +1,7 @@
 @import "less/variables.less";
-@import "css/keyframes.css";
+@import "less/keyframes.less";
 @import "less/global.less";
-
-
-@media (max-width: 767px) {
-	.account {
-		.cover {
-			top: calc(var(--panel-offset) - 20px);
-		}
-	}
-	.slideout-menu {
-		.chat-list {
-			li {
-				.main-avatar {
-					.avatar {
-						border-radius: 50%;
-					}
-				}
-			}
-		}
-		z-index: 10000 !important;
-		background-color: #36393e;
-		background-image: linear-gradient( 145deg ,#36393e,#36393e);
-	}
-	.topic {
-		.topic-header {
-			background: #e8ecf3;
-		}
-	}
-	.btn-default {
-		background-color: #fff !important;
-	}
-	.recent-cards.carousel-mode {
-		margin-top: 10px;
-	}
-	body.lights-out {
-		.topic {
-			.topic-header {
-				background: #36393e;
-			}
-		}
-		.btn-default {
-			background-color: #252a30 !important;
-			color: #ffffff;
-		}
-	}
-	.btn {
-		padding: 8px 12px;
-	}
-	.header {
-		.forum-logo {
-			margin-left: 1px;
-		}
-	}
-	.menu-profile {
-		background: #3d4147;
-	}
-	.topic-list-header {
-		border-top: none;
-		border-bottom: none;
-	}
-}
+@import "less/navbar.less";
 
 .recent-cards {
 	.recent-card-container {
@@ -389,31 +330,6 @@ body.lights-out {
 	.well {
 		background-color: #36393e;
 		border: 1px solid #36393e;
-	}
-	.navbar-default {
-		.navbar-nav {
-			>li {
-				>a {
-					color: #fff;
-				}
-			}
-			>.open {
-				>a {
-					background-color: #333;
-					color: #555;
-					&:focus {
-						background-color: #333;
-						color: #555;
-					}
-					&:hover {
-						background-color: #333;
-						color: #555;
-					}
-				}
-			}
-		}
-		background-color: #36393e;
-		border-color: #d9d9d9;
 	}
 	.tag-list {
 		.tag {
@@ -1125,44 +1041,5 @@ code {
 	}
 	.chat-list {
 		color: #ccc;
-	}
-}
-@media only screen and (max-width: 991px) {
-	.topic {
-		.content {
-			padding: 0px 20px 0px 20px !important;
-		}
-		.posts.timeline {
-			[component=post] {
-				>div {
-					&:not(.content) {
-						padding: 0px 20px 0px 20px !important;
-					}
-				}
-			}
-		}
-	}
-}
-@media (max-width: 991px) {
-	.topic {
-		.posts.timeline {
-			[component=post] {
-				border-bottom: 1px solid #eee;
-			}
-		}
-		h1 {
-			.topic-title {
-				margin-top: 15px;
-			}
-		}
-	}
-	body.lights-out {
-		.topic {
-			.posts.timeline {
-				[component=post] {
-					border-bottom: 1px solid #252a30;
-				}
-			}
-		}
 	}
 }
