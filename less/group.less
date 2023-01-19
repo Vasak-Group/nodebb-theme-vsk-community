@@ -1,0 +1,22 @@
+/*--------------------------------------------------------------
+# Grupos
+--------------------------------------------------------------*/
+
+.panel{
+    border-radius: var(--border-radius);
+}
+
+.groups.list {
+    > .row {
+        background: var(--bg-primary);
+        border-radius: var(--border-radius);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row;
+    }
+    
+    [component="groups/summary"] .list-cover {
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+    }
+}
