@@ -1,215 +1,85 @@
 @import "./variables.less";
 
 /*--------------------------------------------------------------
-# General
+# Fonts
 --------------------------------------------------------------*/
 @font-face {
     font-family: ChailceNoggin;
     src: url("https://vasak.net.ar/fonts/ChailceNogginRegular.ttf");
 }
 
-body {
-    font-family: "Open Sans", sans-serif;
-    color: #444444;
-    background: #f1f6fe;
-    padding-top: 0px;
-}
-
-.breadcrumb{
-    border-radius: var(--border-radius);
-}
-
 .v-font {
     font-family: "ChailceNoggin", sans-serif;
 }
 
-a {
-    color: var(--accent-color);
-    text-decoration: none;
-
-    &:hover {
-        color: var(--accent-color-dark);
-        text-decoration: none;
-    }
-}
-
-h1 {
-    font-family: "Roboto", sans-serif;
-}
-
-h2 {
-    font-family: "Roboto", sans-serif;
-}
-
-h3 {
-    font-family: "Roboto", sans-serif;
-}
-
-h4 {
-    font-family: "Roboto", sans-serif;
-}
-
-h5 {
-    font-family: "Roboto", sans-serif;
-}
-
-h6 {
-    font-family: "Roboto", sans-serif;
-}
-
 /*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
+# Body
 --------------------------------------------------------------*/
 
-@media screen and (max-width: 768px) {
-    [data-aos-delay] {
-        transition-delay: 0 !important;
-    }
-}
-
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
-.back-to-top {
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    right: 15px;
-    bottom: 15px;
-    z-index: 996;
-    background: var(--accent-color);
-    width: 40px;
-    height: 40px;
-    border-radius: var(--border-radius);
-    transition: all 0.4s;
-
-    em {
-        font-size: 28px;
-        color: #fff;
-        line-height: 0;
-    }
-
-    i {
-        font-size: 28px;
-        color: #fff;
-        line-height: 0;
-    }
-
-    &:hover {
-        background: var(--accent-color-dark);
-        color: #fff;
-    }
-}
-
-.back-to-top.active {
-    visibility: visible;
-    opacity: 1;
-}
-
-
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-
-@-webkit-keyframes "animate-preloader" {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes "animate-preloader" {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-#preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    overflow: hidden;
-    background: var(--bg-primary);
-
-    &:before {
-        content: "";
-        position: fixed;
-        top: calc(50% - 30px);
-        left: calc(50% - 30px);
-        border: 6px solid var(--accent-color);
-        border-top-color: #e2eefd;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        -webkit-animation: animate-preloader 1s linear infinite;
-        animation: animate-preloader 1s linear infinite;
-    }
-}
-
-.main{
-    padding: 10px;
-}
-
-.text-primary {
-    color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Sidebar
---------------------------------------------------------------*/
-
-.sidebar {
-    >div {
-        background: #fff;
-        border-radius: var(--border-radius);
-        padding: 10px;
-        margin-bottom: 15px;
-    }
-}
-
-.form-control {
-    border-radius: var(--border-radius);
-    border-color: var(--accent-color-dark);
-
-    &:hover{
-        border-color: var(--accent-color);
-    }
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--bg-seconday);
 }
 
 /*--------------------------------------------------------------
 # Buttons
 --------------------------------------------------------------*/
 
-.btn{
+.btn {
     border-radius: var(--border-radius);
-    border-color: var(--accent-color-dark);
+}
 
-    &:hover{
-        border-color: var(--accent-color);
-    }
+.btn-default {
+	color: var(--font-color);
+	background-color: var(--bg-primary);
+	border-color: var(--bg-seconday);
+	font-weight: 600;
+
+	&:active {
+		color: #fff;
+		background-color: var(--accent-color);
+		border-color: var(--accent-color);
+	}
+	&:focus {
+		color: #fff;
+		background-color: var(--accent-color);
+		border-color: var(--accent-color);
+	}
+	&:hover {
+		color: #fff;
+		background-color: var(--accent-color);
+		border-color: var(--accent-color);
+	}
 }
 
 .btn-primary {
-    border-radius: var(--border-radius);
-    background: var(--accent-color);
-    border-color: var(--accent-color-dark);
+	background-color: var(--accent-color);
+	border-color: var(--accent-color);
+	font-weight: 600;
+	border-radius: var(--border-radius);
 
-    &:hover {
-        background: var(--accent-color-dark);
-        border-color: var(--accent-color);
-    }
+	&:active {
+		background-color: var(--accent-color-dark);
+		border-color: var(--accent-color-dark);
+		font-weight: 600;
+	}
+	&:focus {
+		background-color: var(--accent-color-dark);
+		border-color: var(--accent-color-dark);
+		font-weight: 600;
+	}
+	&:hover {
+		background-color: var(--accent-color-dark);
+		border-color: var(--accent-color-dark);
+		font-weight: 600;
+	}
 }
 
-.alert {
-    border-radius: var(--border-radius);
+/*--------------------------------------------------------------
+# Links
+--------------------------------------------------------------*/
+
+a {
+	color: var(--accent-color);
 }
+
