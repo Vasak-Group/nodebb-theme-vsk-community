@@ -79,6 +79,18 @@ body {
 
 a {
   color: var(--accent-color);
+
+  &:active {
+    color: var(--accent-color-dark)
+  }
+
+  &:focus {
+    color: var(--accent-color-dark)
+  }
+
+  &:hover {
+    color: var(--accent-color-dark)
+  }
 }
 
 /*--------------------------------------------------------------
@@ -128,4 +140,13 @@ a {
   background-color: var(--accent-color);
   color: var(--bg-primary);
   border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+/*--------------------------------------------------------------
+# Alerts
+--------------------------------------------------------------*/
+
+iframe {
+  border-radius: var(--border-radius);
+  border: 0px;
 }
