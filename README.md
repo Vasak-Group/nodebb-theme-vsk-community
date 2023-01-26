@@ -11,3 +11,12 @@ npm run build:less
 Generates a file: `build/theme.css` that contains the css to be added in *Appearance -> Custom Content (HTML/JS/CSS) -> CSS/LESS*
 
 > Remember that you must have the option to **Activate custom CSS/LESS** activated
+
+## Dependencies
+
+* NodeBB: v2.8.4
+* Persona Theme: 12.1.12
+
+## Image 
+
+![ligth theme](./img/ligth.jpg)
