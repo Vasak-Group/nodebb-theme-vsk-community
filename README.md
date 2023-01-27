@@ -20,3 +20,9 @@ Generates a file: `build/theme.css` that contains the css to be added in *Appear
 ## Preview 
 
 ![ligth theme](./screenshot.jpg)
+
+## Install 
+
+```Shell
+npm i nodebb-theme-vsk-theme
+```
