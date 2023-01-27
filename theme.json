@@ -1,0 +1,8 @@
+{
+    "id": "nodebb-theme-vsk-community",
+    "name": "VSK community",
+    "description": "A simple and organized theme with a modern aesthetic respecting the vasak guidelines",
+    "url": "https://github.com/Vasak-Group/nodebb-theme-vsk-community",
+    "screenshot": "screenshot.jpg",
+    "baseTheme": "nodebb-theme-persona"
+}
