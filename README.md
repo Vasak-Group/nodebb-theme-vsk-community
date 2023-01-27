@@ -17,6 +17,6 @@ Generates a file: `build/theme.css` that contains the css to be added in *Appear
 * NodeBB: v2.8.4
 * Persona Theme: 12.1.12
 
-## Image 
+## Preview 
 
-![ligth theme](./img/ligth.jpg)
+![ligth theme](./screenshot.jpg)
