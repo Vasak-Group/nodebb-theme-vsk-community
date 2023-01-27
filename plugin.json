@@ -1,0 +1,28 @@
+{
+    "id": "nodebb-theme-vsk-community",
+    "library": "./lib/vsk-community.js",
+    "hooks": [
+        {
+            "hook": "filter:middleware.renderHeader",
+            "method": "renderHeader"
+        },
+        {
+            "hook": "filter:middleware.renderFooter",
+            "method": "renderFooter"
+        },
+        {
+            "hook": "filter:widgets.getAreas",
+            "method": "defineWidgetAreas"
+        }
+    ],
+    "scripts": [
+        "static/lib/vsk-community.js",
+        "../../nodebb-theme-persona/public/modules/autohidingnavbar.js",
+        "../../nodebb-theme-persona/public/persona.js"
+    ],
+    "modules": {
+        "pulling.js": "node_modules/pulling/build/pulling-drawer.js",
+        "persona/quickreply.js": "../../nodebb-theme-persona/public/modules/quickreply.js"
+    },
+	"templates": "templates"
+}
