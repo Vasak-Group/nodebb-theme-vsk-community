@@ -1,6 +1,5 @@
 {
     "id": "nodebb-theme-vsk-community",
-    "library": "./lib/vsk-community.js",
     "hooks": [
         {
             "hook": "filter:middleware.renderHeader",
@@ -16,7 +15,7 @@
         }
     ],
     "scripts": [
-        "static/lib/vsk-community.js",
+        "public/js/vsk-community.js",
         "../../nodebb-theme-persona/public/modules/autohidingnavbar.js",
         "../../nodebb-theme-persona/public/persona.js"
     ],
