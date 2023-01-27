@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-vsk-community",
-  "version": "0.0.31",
+  "version": "0.1.0",
   "description": "NodeBB Theme for Vasak Community. It is basically a CSS that allows you to extend the person Theme and maintain a new theme based on that standard.",
   "main": "theme.less",
   "scripts": {
